@@ -3,6 +3,8 @@ package net.flam303.modernsculkhunt.block.blockentity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -14,7 +16,7 @@ public class ActiveSculkCatalystEntity extends BlockEntity {
     public int healTimer = 0;
     public static final int HEAL_INTERVAL = 600;
 
-    public ActiveSculkCatalystEntity(BlockEntityType<?> type, BlockPos pos, BlockState blockState) {
+    public ActiveSculkCatalystEntity(BlockPos pos, BlockState blockState) {
         super(ModBlockEntities.ACTIVE_SCULK_CATALYST_BE.get(), pos, blockState);
     }
 
@@ -25,6 +27,7 @@ public class ActiveSculkCatalystEntity extends BlockEntity {
 
         currentHealth -= damage;
         healTimer = 0;
+        level.playSound(null, pos, SoundEvents.SCULK_BLOCK_BREAK, SoundSource.BLOCKS, 1.0f, 10.0f);
         if (currentHealth <= 0.0f) {
             level.destroyBlock(pos, false);
         }

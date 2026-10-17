@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "pulse=0": { "model": "modernsculkhunt:block/active_sculk_catalyst" },
+    "pulse=1": { "model": "modernsculkhunt:block/active_sculk_catalyst" },
+    "pulse=2": { "model": "modernsculkhunt:block/active_sculk_catalyst" },
+    "pulse=3": { "model": "modernsculkhunt:block/active_sculk_catalyst" },
+    "pulse=4": { "model": "modernsculkhunt:block/active_sculk_catalyst" },
+    "pulse=5": { "model": "modernsculkhunt:block/active_sculk_catalyst" },
+    "pulse=6": { "model": "modernsculkhunt:block/active_sculk_catalyst" },
+    "pulse=7": { "model": "modernsculkhunt:block/active_sculk_catalyst" },
+    "pulse=8": { "model": "modernsculkhunt:block/active_sculk_catalyst" }
+  },
+  "": {
+    "model": "modernsculkhunt:block/active_sculk_catalyst"
+  }
+}

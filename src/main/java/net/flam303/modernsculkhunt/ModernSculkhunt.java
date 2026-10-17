@@ -1,5 +1,7 @@
 package net.flam303.modernsculkhunt;
 
+import net.flam303.modernsculkhunt.block.ModBlocks;
+import net.flam303.modernsculkhunt.block.blockentity.ModBlockEntities;
 import net.flam303.modernsculkhunt.item.ModItems;
 import org.slf4j.Logger;
 
@@ -35,6 +37,8 @@ public class ModernSculkhunt {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
