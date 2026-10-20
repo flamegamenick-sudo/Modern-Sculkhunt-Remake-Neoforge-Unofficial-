@@ -1,9 +1,0 @@
-{
-  "parent": "minecraft:block/sculk_catalyst",
-  "textures": {
-    "bottom":"minecraft:block/sculk",
-    "particle": "minecraft:block/sculk_catalyst_top",
-    "side": "minecraft:block/sculk_catalyst_side",
-    "top": "minecraft:block/sculk_catalyst_top"
-  }
-}
