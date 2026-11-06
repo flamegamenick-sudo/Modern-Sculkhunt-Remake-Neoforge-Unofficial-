@@ -1,8 +1,7 @@
 package net.flam303.modernsculkhunt;
-
-import net.flam303.modernsculkhunt.block.ModBlocks;
-import net.flam303.modernsculkhunt.block.blockentity.ModBlockEntities;
+import net.flam303.modernsculkhunt.item.CreativeModeTabs;
 import net.flam303.modernsculkhunt.item.ModItems;
+import net.flam303.modernsculkhunt.registries.ModAttachments;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -36,7 +35,11 @@ public class ModernSculkhunt {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModAttachments.register(modEventBus);
 
+        ModItems.register(modEventBus);
+
+        CreativeModeTabs.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
